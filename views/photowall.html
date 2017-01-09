@@ -1,0 +1,38 @@
+<section class="de_screen_project_photowall">
+    <ul class="de_project_photowall de_borderbox">
+        <li class="de_borderbox {{'item-'+$index}}" ng-repeat="project in projects" ng-click="showProjectDetail(project.artifact.id)">
+            <div class="thumb_wrapper side_A">
+                <a href="">
+                    <img class="thumb" ng-src="{{project.artifact.profile_image}}">
+                </a>
+            </div>
+            <div class="info_wrapper side_B">
+            <div class="user_info">
+                <a ng-href="users/{{project.user.id}}">
+                    <img class="photo" ng-src="{{project.user.setting.profile_image}}">
+                    <p class="name">{{project.user.fullname}}</p>
+                    <p class="date">{{project.artifact.created_at}}</p>
+                </a>
+            </div>
+            <div class="project_info">
+                <a href="">
+                    <h4>{{project.artifact.name}}</h4>
+                    <p class="abstract">
+                        {{project.artifact.description}}
+                    </p>                  
+                </a>
+            </div>
+            <p class="topic_title">
+            收录于
+            <a ng-if="project.topic" ng-href="topics/{{project.topic.id}}">{{project.topic.name}}</a>
+            <a ng-if="!project.topic" ng-href="users/{{project.user.id}}">{{project.user.fullname}}的作品集</a>
+            </p>            
+            <ul class="de_stats_tags">
+                <li class="badges ico-medal" title="勋章">{{project.artifact.honor_count}}</li>
+                <li class="likes ico-thumb" title="赞">{{project.artifact.praise_count}}</li>
+                <li class="comments ico-textbubble" title="评价">{{project.artifact.comment_count}}</li>
+            </ul>
+            </div>
+        </li>        
+    </ul>
+</section>
