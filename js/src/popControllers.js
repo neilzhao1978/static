@@ -209,3 +209,11 @@ popControllers.controller("editInfo",["$scope","$http","CFunctions","Config","St
 
 }]);
 
+popControllers.controller("popMsg",["$scope","toaster","CFunctions","Config","User",function($scope,toaster,CFunctions,Config,User){
+    $scope.popFlags.title=Config.titles.popMsg;
+    $scope.showBlackOut();
+
+    $scope.mainFlags.extMenuActive=false;
+    $scope.popMessages="";
+
+}]);

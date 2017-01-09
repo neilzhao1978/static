@@ -35,7 +35,8 @@ pinWall.config(["$routeProvider","$locationProvider","$httpProvider","App",
             when("/register",{templateUrl: 'views/projects.html',controller:"projects"}).
             when("/users/:userId/update",{templateUrl: 'views/projects.html',controller:"projects"}).
             when("/change_password",{templateUrl: 'views/projects.html',controller:"projects"}).
-            when("/forget_password",{templateUrl: 'views/projects.html',controller:"projects"});/*.
+            when("/forget_password",{templateUrl: 'views/projects.html',controller:"projects"}).
+            when("/message",{templateUrl:"views/photowall.html",controller:"photowall"});/*.
             otherwise({redirectTo: '/'});*/
 
 
@@ -291,6 +292,8 @@ pinWall.controller("super",["$scope","$location","$sce","Config","CFunctions","S
                 $scope.popFlags.popTemplateUrl=Config.templateUrls.forgetPwd;
             }else if(path.indexOf(Config.urls.signUp)!==-1){
                 $scope.popFlags.popTemplateUrl=Config.templateUrls.signUp;
+            }else if(path.indexOf(Config.urls.popMsg)!==-1){
+                $scope.popFlags.popTemplateUrl=Config.templateUrls.popMsg;
             }else if(path.match(Config.urls.editInfoReg)!==null){
                 $scope.popFlags.popTemplateUrl=Config.templateUrls.editInfo;
             }else if(path.match(Config.urls.projectDetailReg)!==null){
