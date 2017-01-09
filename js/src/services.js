@@ -161,12 +161,12 @@ services.constant("Config",{
     validError:{
         required:"请输入此字段！",
         email:"请输入正确的邮箱格式！",
-        emailExist:"邮箱已经存在！",
+        emailExist:"邮箱已被注册！",
         maxLength:"此字段最多输入${value}个字！",
         minLength:"此字段最少输入${value}个字！",
-        pwdEqualError:"两次输入的密码不一致，请重新输入！",
+        pwdEqualError:"两次输入的密码不一致！",
         usernameRequired:"请输入用户名！",
-        usernameExist:"用户名已经被注册，请填写其他用户名！",
+        usernameExist:"用户名已经被注册！",
         validCodeRequired:"请输入验证码！",
         descriptionLengthError:"最多输入140个字！"
     },
@@ -188,6 +188,7 @@ services.constant("Config",{
         nameOrPwdError:"用户名或者密码错误！",
         oldPwdError:"原始密码不正确！",
         emailNotExist:"输入的邮箱不存在！",
+        emailExist:"此邮箱已被注册！",
         activeSuccess:"操作成功，请进入邮箱查看激活邮件！",
         mediaHasNoThumb:"有媒体文件没有上传缩略图，请上传后再预览！",
         hasNoMedia:"没有上传媒体文件或者有上传错误的媒体文件，请上传或者删除后再预览！",
