@@ -586,6 +586,8 @@ img{
     display: block;
 	color: #333;
     cursor: pointer;
+    margin-top:10px;
+    font-size: 14px;
 }
 
 .de_popout_reg .de_jcaptcha_img {

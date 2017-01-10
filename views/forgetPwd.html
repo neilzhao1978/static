@@ -19,9 +19,9 @@
             </p>
             <input type="submit" class="de_button de_submit_btn" value="提交" ng-disabled="forgetPwdForm.$invalid">
         </form>
-        <div ng-if="emailUrl!=''">
-            请进入<a ng-href="{{emailUrl}}" class="de_green_text" target="_blank">邮箱</a>进行密码重置！
-        </div>
+        <p ng-if="emailUrl!=''">
+            请<a ng-href="{{emailUrl}}" class="de_green_text" target="_blank">进入邮箱</a>找回密码！
+        </p>
     </article>
 <!-- 找回密码弹窗结束 -->
 </div>
