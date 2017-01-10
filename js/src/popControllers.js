@@ -217,8 +217,10 @@ popControllers.controller("popMsg",["$scope","$route","toaster","CFunctions","Co
     
     //根据$routeParams获取消息参数
     console.log($route.current.params.emailConfirmed)
-    if($route.current.params.emailConfirmed=="true"){
-        $scope.popMessages=Config.messages.emailConfirmed;
+    if($route.current.params.emailConfirmed=="success"){
+        $scope.popMessages=Config.messages.emailConfirmSuccess;
+    }else if($route.current.params.emailConfirmed=="error"){
+        $scope.popMessages=Config.messages.emailConfirmError;
     }
     
 
