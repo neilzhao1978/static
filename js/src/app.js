@@ -189,7 +189,8 @@ pinWall.controller("super",["$scope","$location","$sce","Config","CFunctions","S
 
             if(!notGoBack){
                 LocationChanger.skipReload();
-                history.back();
+                //history.back();
+                history.go(document.getElementById("de_base_url").href);
             }
         };
 
