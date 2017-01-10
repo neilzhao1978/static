@@ -40,10 +40,13 @@ viewControllers.controller("projects",['$scope',"$interval","$location","Config"
         //弹出层页面初始进来都是加载作品数据
         var path=$location.path();
 
-        if(path.indexOf(Config.urls.editPwd)!==-1||path.indexOf(Config.urls.signIn)!==-1||
-            path.indexOf(Config.urls.signUp)!==-1||path.match(Config.urls.editInfoReg)!==null||
+        if( path.indexOf(Config.urls.editPwd)!==-1||
+            path.indexOf(Config.urls.signIn)!==-1||
+            path.indexOf(Config.urls.signUp)!==-1||
+            path.match(Config.urls.editInfoReg)!==null||
             path.indexOf(Config.urls.forgetPwd)!==-1||
-            (path.indexOf(Config.urls.search)!==-1&&path.match(Config.urls.searchResultReg)==null)){
+            path.indexOf(Config.urls.popMsg)!==-1||
+            (path.indexOf(Config.urls.search)!==-1&&path.match(Config.urls.searchResultReg)==null) ){
             $scope.showBlackOut();
         }
     });
@@ -75,9 +78,12 @@ viewControllers.controller("timeline",['$scope',"$interval","$location","Config"
         //弹出层页面初始进来都是加载作品数据
         var path=$location.path();
 
-        if(path.indexOf(Config.urls.editPwd)!==-1||path.indexOf(Config.urls.signIn)!==-1||
-            path.indexOf(Config.urls.signUp)!==-1||path.match(Config.urls.editInfoReg)!==null||
+        if( path.indexOf(Config.urls.editPwd)!==-1||
+            path.indexOf(Config.urls.signIn)!==-1||
+            path.indexOf(Config.urls.signUp)!==-1||
+            path.match(Config.urls.editInfoReg)!==null||
             path.indexOf(Config.urls.forgetPwd)!==-1||
+            path.indexOf(Config.urls.popMsg)!==-1||
             (path.indexOf(Config.urls.search)!==-1&&path.match(Config.urls.searchResultReg)==null)){
             $scope.showBlackOut();
         }
@@ -109,9 +115,12 @@ viewControllers.controller("photowall",['$scope',"$interval","$location","Config
         //弹出层页面初始进来都是加载作品数据
         var path=$location.path();
 
-        if(path.indexOf(Config.urls.editPwd)!==-1||path.indexOf(Config.urls.signIn)!==-1||
-            path.indexOf(Config.urls.signUp)!==-1||path.match(Config.urls.editInfoReg)!==null||
+        if( path.indexOf(Config.urls.editPwd)!==-1||
+            path.indexOf(Config.urls.signIn)!==-1||
+            path.indexOf(Config.urls.signUp)!==-1||
+            path.match(Config.urls.editInfoReg)!==null||
             path.indexOf(Config.urls.forgetPwd)!==-1||
+            path.indexOf(Config.urls.popMsg)!==-1||
             (path.indexOf(Config.urls.search)!==-1&&path.match(Config.urls.searchResultReg)==null)){
             $scope.showBlackOut();
         }
