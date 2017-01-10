@@ -215,12 +215,11 @@ popControllers.controller("popMsg",["$scope","$routeParams","toaster","CFunction
 
     $scope.mainFlags.extMenuActive=false;
     
-    var paramsObj = $routeParams;
-    console.log(paramsObj)
-    console.log(paramsObj.emailConfirmed)
     //根据$routeParams获取消息参数
-    if(paramsObj.emailConfirmed=="true"){
-        $scope.popMessages=Config.messages.emailConfirmed;
+    console.log(paramsObj.emailConfirmed)
+    if($routeParams.emailConfirmed){
+        $scope.popMessages=$routeParams.emailConfirmed;
+        //$scope.popMessages=Config.messages.emailConfirmed;
     }
     
 
