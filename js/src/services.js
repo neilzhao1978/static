@@ -36,7 +36,8 @@ services.constant("Config",{
         "forgetPwd":"忘记密码",
         "editPwd":"修改密码",
         "editInfo":"修改资料",
-        "search":"探索"
+        "search":"探索",
+        "popMsg":"消息"
     },
     templateUrls:{
         "signIn":"views/signIn.html",
@@ -45,7 +46,8 @@ services.constant("Config",{
         "editPwd":"views/changePwd.html",
         "editInfo":"views/editInfo.html",
         "search":"views/searchPanel.html",
-        "projectDetail":"views/projectDetail.html"
+        "projectDetail":"views/projectDetail.html",
+        "popMsg":"views/showMessage.html"
     },
     urls:{  //用到的路径，主要是用于initPage
         "projectDetail":"projects/:projectId",
@@ -60,7 +62,8 @@ services.constant("Config",{
         "searchResultReg":/search\/.+/,
         "forgetPwd":"forget_password",
         "boxes":"topics",
-        "userHome":"users/:userId"
+        "userHome":"users/:userId",
+        "popMsg":"message"
     },
     imageScale:{
         thumbMedium:"-400x400",
