@@ -209,17 +209,16 @@ popControllers.controller("editInfo",["$scope","$http","CFunctions","Config","St
 
 }]);
 
-popControllers.controller("popMsg",["$scope","$routeParams","toaster","CFunctions","Config","User",function($scope,$routeParams,toaster,CFunctions,Config,User){
+popControllers.controller("popMsg",["$scope","$route","toaster","CFunctions","Config","User",function($scope,$route,toaster,CFunctions,Config,User){
     $scope.popFlags.title=Config.titles.popMsg;
     $scope.showBlackOut();
 
     $scope.mainFlags.extMenuActive=false;
     
     //根据$routeParams获取消息参数
-    console.log($routeParams.emailConfirmed)
-    if($routeParams.emailConfirmed){
-        $scope.popMessages=$routeParams.emailConfirmed;
-        //$scope.popMessages=Config.messages.emailConfirmed;
+    console.log($route.current.params.emailConfirmed)
+    if($route.current.params.emailConfirmed=="true"){
+        $scope.popMessages=Config.messages.emailConfirmed;
     }
     
 
