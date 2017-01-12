@@ -195,7 +195,7 @@ pinWall.controller("super",["$scope","$location","$sce","Config","CFunctions","S
             
             if(Storage.popViaURL){
                 LocationChanger.skipReload().withReplace();
-                
+                delete Storage.popViaURL;
             }else if(!notGoBack){
                 
                 LocationChanger.skipReload();
