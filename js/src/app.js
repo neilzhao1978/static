@@ -193,7 +193,10 @@ pinWall.controller("super",["$scope","$location","$sce","Config","CFunctions","S
 
             $scope.hideBlackOut();
             
-            if(!notGoBack && !Storage.popViaURL){
+            if(Storage.popViaURL){
+                LocationChanger.skipReload().withReplace();
+                
+            }else if(!notGoBack){
                 
                 LocationChanger.skipReload();
                 history.back();
