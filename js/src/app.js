@@ -193,7 +193,7 @@ pinWall.controller("super",["$scope","$location","$sce","Config","CFunctions","S
                 
             }else if(!notGoBack){
                 LocationChanger.skipReload();
-                
+                history.back();
             }
         };
 
