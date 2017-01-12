@@ -47,6 +47,8 @@ viewControllers.controller("projects",['$scope',"$interval","$location","Config"
             path.indexOf(Config.urls.forgetPwd)!==-1||
             path.indexOf(Config.urls.popMsg)!==-1||
             (path.indexOf(Config.urls.search)!==-1&&path.match(Config.urls.searchResultReg)==null) ){
+            
+            Storage.popViaURL = true;
             $scope.showBlackOut();
         }
     });
@@ -85,6 +87,7 @@ viewControllers.controller("timeline",['$scope',"$interval","$location","Config"
             path.indexOf(Config.urls.forgetPwd)!==-1||
             path.indexOf(Config.urls.popMsg)!==-1||
             (path.indexOf(Config.urls.search)!==-1&&path.match(Config.urls.searchResultReg)==null)){
+            Storage.popViaURL = true;
             $scope.showBlackOut();
         }
     });

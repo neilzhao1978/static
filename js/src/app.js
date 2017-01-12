@@ -24,18 +24,18 @@ pinWall.config(["$routeProvider","$locationProvider","$httpProvider","App",
             when("/topics/:boxId/update",{templateUrl: 'views/boxUpdate.html',controller:"boxUpdate"}).
             when("/topics/:boxId",{templateUrl: 'views/boxDetail.html',controller:"boxDetail"}).
             when("/topic/:boxId/artifact",{templateUrl: 'views/projectUpdate.html',controller:"projectUpdate"}).
-            when("/search",{templateUrl: 'views/projects.html',controller:"projects"}).
+            when("/search",{templateUrl: 'views/photowall.html',controller:"photowall"}).
             when("/search/:content",{templateUrl: 'views/searchResult.html',controller:"searchResult"}).
             when("/admin/comments",{templateUrl: 'views/admin/commentsManage.html',controller:"commentsManage"}).
             when("/admin/projects",{templateUrl: 'views/admin/projectsManage.html',controller:"projectsManage"}).
             when("/admin/users",{templateUrl: 'views/admin/usersManage.html',controller:"usersManage"}).
             when("/users/:userId/topics",{templateUrl: 'views/boxes.html',controller:"boxes"}).
             when("/users/:userId",{templateUrl: 'views/userHome.html',controller:"userHome"}).
-            when("/login",{templateUrl: 'views/projects.html',controller:"projects"}).
-            when("/register",{templateUrl: 'views/projects.html',controller:"projects"}).
+            when("/login",{templateUrl: 'views/photowall.html',controller:"photowall"}).
+            when("/register",{templateUrl: 'views/photowall.html',controller:"photowall"}).
             when("/users/:userId/update",{templateUrl: 'views/projects.html',controller:"projects"}).
-            when("/change_password",{templateUrl: 'views/projects.html',controller:"projects"}).
-            when("/forget_password",{templateUrl: 'views/projects.html',controller:"projects"}).
+            when("/change_password",{templateUrl: 'views/photowall.html',controller:"photowall"}).
+            when("/forget_password",{templateUrl: 'views/photowall.html',controller:"photowall"}).
             when("/message",{templateUrl:"views/photowall.html",controller:"photowall"});/*.
             otherwise({redirectTo: '/'});*/
 
