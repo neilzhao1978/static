@@ -186,12 +186,14 @@ pinWall.controller("super",["$scope","$location","$sce","Config","CFunctions","S
             Storage.initEditUserObj();
 
             $scope.hideBlackOut();
-
-            if(!notGoBack){
-                LocationChanger.skipReload();
-                //history.back();
-                //调整了返回方式，一律返回到网站首页
+            
+            if(Storage.popViaURL){
+                //直接从URL打开的pop，退出时一律返回到网站首页
                 window.location=document.getElementById("de_base_url").href;
+                
+            }else if(!notGoBack){
+                LocationChanger.skipReload();
+                
             }
         };
 

@@ -112,7 +112,7 @@ viewControllers.controller("photowall",['$scope',"$interval","$location","Config
             }
         },200);
 
-        //弹出层页面初始进来都是加载作品数据
+        //直接通过URL调用弹出层，弹出层的下面自动加载photowall
         var path=$location.path();
 
         if( path.indexOf(Config.urls.editPwd)!==-1||
@@ -122,6 +122,8 @@ viewControllers.controller("photowall",['$scope',"$interval","$location","Config
             path.indexOf(Config.urls.forgetPwd)!==-1||
             path.indexOf(Config.urls.popMsg)!==-1||
             (path.indexOf(Config.urls.search)!==-1&&path.match(Config.urls.searchResultReg)==null)){
+            
+            Storage.popViaURL = true;
             $scope.showBlackOut();
         }
     });
