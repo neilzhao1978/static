@@ -182,16 +182,18 @@ pinWall.controller("super",["$scope","$location","$sce","Config","CFunctions","S
         $scope.closePop=function(notGoBack){
             
             
-            if(Storage.popViaURL){
+            /*if(Storage.popViaURL){
                 //直接从URL打开的pop，退出时一律返回到网站首页
-                window.location=document.getElementById("de_base_url").href;
+                //window.location=document.getElementById("de_base_url").href;
                 
-            }else if(!notGoBack){
-                $scope.popFlags.title="";
-                $scope.popFlags.popTemplateUrl="";
-                Storage.initEditUserObj();
+            }*/
+            $scope.popFlags.title="";
+            $scope.popFlags.popTemplateUrl="";
+            Storage.initEditUserObj();
 
-                $scope.hideBlackOut();
+            $scope.hideBlackOut();
+            
+            if(!notGoBack && !Storage.popViaURL){
                 
                 LocationChanger.skipReload();
                 history.back();
