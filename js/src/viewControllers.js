@@ -25,6 +25,8 @@ viewControllers.controller("projects",['$scope',"$interval","$location","Config"
 
 
     Storage.loadedProjects=$scope.projects=[];
+    $scope.loadedData = false;
+    
     Project.getProjects().$promise.then(function(data){
         //console.log("In views");
         var count= 0,length=data.artifacts.length;
@@ -34,6 +36,10 @@ viewControllers.controller("projects",['$scope',"$interval","$location","Config"
                 count++;
             }else{
                 $interval.cancel(inter);
+            }
+
+            if(!$scope.loadedData){
+                    $scope.loadedData=!$scope.loadedData;
             }
         },200);
 
@@ -103,6 +109,8 @@ viewControllers.controller("photowall",['$scope',"$interval","$location","Config
     Storage.clearScrollData();
 
     Storage.loadedProjects=$scope.projects=[];
+    $scope.loadedData = false;
+
     Project.getProjects().$promise.then(function(data){
         //console.log("In views");
         var count= 0,length=data.artifacts.length;
@@ -112,6 +120,10 @@ viewControllers.controller("photowall",['$scope',"$interval","$location","Config
                 count++;
             }else{
                 $interval.cancel(inter);
+            }
+
+            if(!$scope.loadedData){
+                    $scope.loadedData=!$scope.loadedData;
             }
         },200);
 
