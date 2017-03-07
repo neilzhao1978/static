@@ -10,7 +10,6 @@
         <input  type="text" class="searchInput de_borderbox de_inputbox_gray" ng-keydown="keyDownSearch($event)" ng-model="filter.keyword">
         </span>
     </div>
-    <p ng-if="!loadedData" class="noResult">出了点状况，无法从服务器获取数据。</p>
     <p class="noResult" ng-if="boxes.length==0&&loadedData">哎呀，没找到相关作业荚。</p>
     <!-- 选题列表 -->
     <ul class="de_topic_list">        
