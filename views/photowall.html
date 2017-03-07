@@ -1,4 +1,6 @@
 <section class="de_screen_project_photowall">
+    <p ng-if="projects.length==0&&loadedData" class="noResult">哎呀，没找到相关作品。</p>
+    <p ng-if="!loadedData" class="noResult">出了点状况，无法从服务器获取数据。</p>
     <ul class="de_project_photowall de_borderbox">
         <li class="de_borderbox {{'item-'+$index}}" ng-repeat="project in projects" ng-click="showProjectDetail(project.artifact.id)">
             <div class="thumb_wrapper side_A">
