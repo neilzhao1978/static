@@ -116,9 +116,9 @@ directives.directive("emailExist",function($http){
                         }
                     }).success(function(data,status,headers,config){
                             if(data.exist){
-                                ctrl.$setValidity("emailExist",false);
-                            }else{
                                 ctrl.$setValidity("emailExist",true);
+                            }else{
+                                ctrl.$setValidity("emailExist",false);
                             }
                         }).error(function(data,status,headers,config){
                             ctrl.$setValidity('emailExist', true);
