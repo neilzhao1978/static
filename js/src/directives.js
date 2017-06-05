@@ -104,7 +104,7 @@ directives.directive("emailExist",function($http){
     return {
         require:"ngModel",
         link:function(scope,elem,attrs,ctrl){
-            elem.bind("keyup",function(){
+            elem.bind("blur",function(){
                 if(ctrl.$viewValue){
                     $http.get("email_exists",{
                         params:{email:ctrl.$viewValue},
