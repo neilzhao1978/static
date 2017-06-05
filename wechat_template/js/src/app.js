@@ -3,7 +3,7 @@ var weChatApp=angular.module("weChatApp",[]);
 weChatApp.constant("Config",{
     imageScale:{
         thumbSmall:"-200x200",
-        previewSmall:"-400x300"
+        previewSmall:"-400x400"
     },
     ajaxUrls:{
         getProjectDetail:"../api/artifacts/:projectId"

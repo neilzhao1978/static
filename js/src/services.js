@@ -68,7 +68,7 @@ services.constant("Config",{
     imageScale:{
         thumbMedium:"-400x400",
         thumbSmall:"-200x200",
-        previewSmall:"-400x300"
+        previewSmall:"-400x400"
     },
     uploadSize:{
         maxMediaSize:"300m", //最大的媒体文件上传大小
