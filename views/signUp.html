@@ -20,7 +20,7 @@
                         <span class="error" ng-if="registerForm.email.$dirty && registerForm.email.$touched">
                             <label ng-if="registerForm.email.$error.ownRequired">{{validMessage.required}}</label>
                             <label ng-if="registerForm.email.$error.email">{{validMessage.email}}</label>
-                            <label ng-if="registerForm.email.$error.emailExist">{{validMessage.emailExist}}</label>
+                            <label ng-if="!registerForm.email.$error.emailExist">{{validMessage.emailExist}}</label>
                             <label ng-if="registerForm.email.$error.maxlength">{{validMessage.maxLength | setMaxLength:32}}</label>
                         </span>
                     </p>
