@@ -45,7 +45,7 @@ weChatApp.controller("projectDetail",["$scope","$http","Config","CFunctions",fun
         for(var i=0;i<length;i++){
             var fileInfo=CFunctions.getFilePathInfo($scope.project.assets[i]["profile_image"]);
             $scope.project.assets[i]["profile_image"]=
-                fileInfo["filePath"]+Config.imageScale.previewSmall+fileInfo["ext"];
+                fileInfo["filePath"]+fileInfo["ext"]+Config.imageScale.previewSmall;
         }
     });
 }]);

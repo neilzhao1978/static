@@ -66,9 +66,9 @@ services.constant("Config",{
         "popMsg":"message"
     },
     imageScale:{
-        thumbMedium:"-400x400",
-        thumbSmall:"-200x200",
-        previewSmall:"-400x400"
+        thumbMedium:"?imageMogr2/thumbnail/400x400",
+        thumbSmall:"?imageMogr2/thumbnail/200x200",
+        previewSmall:"?imageMogr2/thumbnail/400x400" //手机
     },
     uploadSize:{
         maxMediaSize:"300m", //最大的媒体文件上传大小
@@ -813,13 +813,13 @@ services.factory("Project",["$rootScope","$resource","Storage","CFunctions","Con
                         for(var i=0;i<length;i++){
                             var fileInfo=CFunctions.getFilePathInfo(data.artifacts[i]["artifact"]["profile_image"]);
                             data.artifacts[i]["artifact"]["profile_image"]=
-                                fileInfo["filePath"]+Config.imageScale.thumbSmall+fileInfo["ext"];
+                                fileInfo["filePath"]+fileInfo["ext"]+Config.imageScale.thumbSmall;
                         }
                     }else{
                         for(var i=0;i<length;i++){
                             var fileInfo=CFunctions.getFilePathInfo(data.artifacts[i]["artifact"]["profile_image"]);
                             data.artifacts[i]["artifact"]["profile_image"]=
-                                fileInfo["filePath"]+Config.imageScale.thumbMedium+fileInfo["ext"];
+                                fileInfo["filePath"]+fileInfo["ext"]+Config.imageScale.thumbMedium;
                         }
                     }
                 });
@@ -842,13 +842,13 @@ services.factory("Project",["$rootScope","$resource","Storage","CFunctions","Con
                         for(var i=0;i<length;i++){
                             var fileInfo=CFunctions.getFilePathInfo(data.artifacts[i]["artifact"]["profile_image"]);
                             data.artifacts[i]["artifact"]["profile_image"]=
-                                fileInfo["filePath"]+Config.imageScale.thumbSmall+fileInfo["ext"];
+                                fileInfo["filePath"]+fileInfo["ext"]+Config.imageScale.thumbSmall;
                         }
                     }else{
                         for(var i=0;i<length;i++){
                             var fileInfo=CFunctions.getFilePathInfo(data.artifacts[i]["artifact"]["profile_image"]);
                             data.artifacts[i]["artifact"]["profile_image"]=
-                                fileInfo["filePath"]+Config.imageScale.thumbMedium+fileInfo["ext"];
+                                fileInfo["filePath"]+fileInfo["ext"]+Config.imageScale.thumbMedium;
                         }
                     }
                 });
@@ -903,13 +903,13 @@ services.factory("User",["$rootScope","$resource","CFunctions","Storage","Config
                     for(var i=0;i<length;i++){
                         var fileInfo=CFunctions.getFilePathInfo(data.artifacts[i]["artifact"]["profile_image"]);
                         data.artifacts[i]["artifact"]["profile_image"]=
-                            fileInfo["filePath"]+Config.imageScale.thumbSmall+fileInfo["ext"];
+                            fileInfo["filePath"]+fileInfo["ext"]+Config.imageScale.thumbSmall;
                     }
                 }else{
                     for(var i=0;i<length;i++){
                         var fileInfo=CFunctions.getFilePathInfo(data.artifacts[i]["artifact"]["profile_image"]);
                         data.artifacts[i]["artifact"]["profile_image"]=
-                            fileInfo["filePath"]+Config.imageScale.thumbMedium+fileInfo["ext"];
+                            fileInfo["filePath"]+fileInfo["ext"]+Config.imageScale.thumbMedium;
                     }
                 }
             });
@@ -990,7 +990,7 @@ services.factory("Box",["$rootScope","$resource","CFunctions","Config","Storage"
                             for(var j= 0,len=data.topics[i]["artifacts"].length;j<len;j++){
                                 var fileInfo=CFunctions.getFilePathInfo(data.topics[i]["artifacts"][j]["artifact"]["profile_image"]);
                                 data.topics[i]["artifacts"][j]["artifact"]["profile_image"]=
-                                    fileInfo["filePath"]+Config.imageScale.thumbSmall+fileInfo["ext"];
+                                    fileInfo["filePath"]+fileInfo["ext"]+Config.imageScale.thumbSmall;
                             }
                         }
                     }else{
@@ -998,7 +998,7 @@ services.factory("Box",["$rootScope","$resource","CFunctions","Config","Storage"
                             for(var j= 0,len=data.topics[i]["artifacts"].length;j<len;j++){
                                 var fileInfo=CFunctions.getFilePathInfo(data.topics[i]["artifacts"][j]["artifact"]["profile_image"]);
                                 data.topics[i]["artifacts"][j]["artifact"]["profile_image"]=
-                                    fileInfo["filePath"]+Config.imageScale.thumbMedium+fileInfo["ext"];
+                                    fileInfo["filePath"]+fileInfo["ext"]+Config.imageScale.thumbMedium;
                             }
                         }
                     }
@@ -1021,13 +1021,13 @@ services.factory("Box",["$rootScope","$resource","CFunctions","Config","Storage"
                         for(var i=0;i<length;i++){
                             var fileInfo=CFunctions.getFilePathInfo(data.artifacts[i]["artifact"]["profile_image"]);
                             data.artifacts[i]["artifact"]["profile_image"]=
-                                fileInfo["filePath"]+Config.imageScale.thumbSmall+fileInfo["ext"];
+                                fileInfo["filePath"]+fileInfo["ext"]+Config.imageScale.thumbSmall;
                         }
                     }else{
                         for(var i=0;i<length;i++){
                             var fileInfo=CFunctions.getFilePathInfo(data.artifacts[i]["artifact"]["profile_image"]);
                             data.artifacts[i]["artifact"]["profile_image"]=
-                                fileInfo["filePath"]+Config.imageScale.thumbMedium+fileInfo["ext"];
+                                fileInfo["filePath"]+fileInfo["ext"]+Config.imageScale.thumbMedium;
                         }
                     }
                 });

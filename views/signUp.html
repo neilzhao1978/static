@@ -28,7 +28,7 @@
                     <p class="de_pwd_field">
                         <input type="password" class="de_borderbox de_inputbox_gray" name="password" placeholder="密码"
                                ng-minlength="6" autocomplete="off" ng-model="user.password" ng-maxlength="20" own-required required>
-                        <span class="error" ng-if="registerForm.password.$dirty && registerForm.password.$touched">
+                        <span class="error" ng-if="registerForm.password.$dirty || registerForm.password.$touched">
                             <label ng-if="registerForm.password.$error.ownRequired">{{validMessage.required}}</label>
                             <label ng-if="registerForm.password.$error.minlength">{{validMessage.minLength | setMinLength:6}}</label>
                             <label ng-if="registerForm.password.$error.maxlength">{{validMessage.maxLength | setMaxLength:20}}</label>

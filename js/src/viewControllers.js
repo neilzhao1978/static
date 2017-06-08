@@ -1057,14 +1057,14 @@ viewControllers.controller("boxDetail",['$scope',"$routeParams","Box","Storage",
             for(var j= 0;j<length;j++){
                 var fileInfo=CFunctions.getFilePathInfo($scope.box.projects[j]["artifact"]["profile_image"]);
                 $scope.box.projects[j]["artifact"]["profile_image"]=
-                    fileInfo["filePath"]+Config.imageScale.thumbSmall+fileInfo["ext"];
+                    fileInfo["filePath"]+fileInfo["ext"]+Config.imageScale.thumbSmall;
             }
 
         }else{
             for(var j= 0;j<length;j++){
                 var fileInfo=CFunctions.getFilePathInfo($scope.box.projects[j]["artifact"]["profile_image"]);
                 $scope.box.projects[j]["artifact"]["profile_image"]=
-                    fileInfo["filePath"]+Config.imageScale.thumbMedium+fileInfo["ext"];
+                    fileInfo["filePath"]+fileInfo["ext"]+Config.imageScale.thumbMedium;
             }
         }
     });
@@ -1177,14 +1177,14 @@ viewControllers.controller("userHome",['$scope',"$routeParams","$interval","User
             for(var j= 0;j<length;j++){
                 var fileInfo=CFunctions.getFilePathInfo($scope.user.topProjects[j]["artifact"]["profile_image"]);
                 $scope.user.topProjects[j]["artifact"]["profile_image"]=
-                    fileInfo["filePath"]+Config.imageScale.thumbSmall+fileInfo["ext"];
+                    fileInfo["filePath"]+fileInfo["ext"]+Config.imageScale.thumbSmall;
             }
 
         }else{
             for(var j= 0;j<length;j++){
                 var fileInfo=CFunctions.getFilePathInfo($scope.user.topProjects[j]["artifact"]["profile_image"]);
                 $scope.user.topProjects[j]["artifact"]["profile_image"]=
-                    fileInfo["filePath"]+Config.imageScale.thumbMedium+fileInfo["ext"];
+                    fileInfo["filePath"]+fileInfo["ext"]+Config.imageScale.thumbMedium;
             }
         }
     });
