@@ -835,7 +835,8 @@ viewControllers.controller("projectUpdate",["$scope","$routeParams","$http","$ro
                 }
             }
 
-            CFunctions.timeoutRedirect(Config.urls.userHome.replace(":userId",$scope.currentUser.id),false,true);
+            //CFunctions.timeoutRedirect(Config.urls.userHome.replace(":userId",$scope.currentUser.id),false,true);
+            CFunctions.timeoutRedirect(Config.urls.projectDetail.replace(":projectId",$scope.project.id),false,true);
         }
     }]);
 
