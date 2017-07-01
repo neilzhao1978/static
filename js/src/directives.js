@@ -324,9 +324,11 @@ directives.directive("windowScroll",["$window","$document","$timeout","$interval
                     Storage.scrollTimer=$timeout(function(){
                         var scrollTop=0;
                         if($window.scrollY){
-                            scrollTop=$window.scrollY;
+                            //windows平台下的scrollY可能返回一个带小数的数值，导致无法正确判断是否触及底部。
+                            // 设置 scrollTop = scrollY +1，即当滚动位置离底部差1个像素时，触发加载。
+                            scrollTop=Math.ceil($window.scrollY)+1;
                         }else{
-                            scrollTop=document.documentElement.scrollTop;
+                            scrollTop=Math.ceil(document.documentElement.scrollTop)+1;
                         }
 
                         if(Storage.currentScrollScreenType &&
