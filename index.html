@@ -102,10 +102,10 @@
                 </ul>
             </nav>
 
-            <!-----顶部菜单----->
+            <!-- 顶部菜单 -->
             <nav class="de_top_nav" id="de_top_nav" >
                 <ul>
-                    <li><a href="projects" ng-class="{active:mainFlags.currentMenu=='project'}" class="de_borderbox" title="设计廊">设计廊</a></li>
+                    <li><a href="projects" ng-class="{active:mainFlags.currentMenu=='project'}" class="de_borderbox de_btn_gallery" title="设计廊">设计廊</a></li>
                     <li class="de_btn_topicbox"><a href="topics" ng-class="{active:mainFlags.currentMenu=='box'}" class="de_borderbox" title="作业荚">作业荚</a></li>
                     <li class="de_btn_filter"><a href="" class="de_borderbox" ng-click="toSearchPanel()" title="探索...">探索...</a></li>
                 </ul>
@@ -120,18 +120,18 @@
     </div>
 
 
-    <!-----------作品详情----------->
+    <!-- 作品详情 -->
     <section class="de_screen_project_detail"
              ng-show="mainFlags.showProjectDetailFlag" ng-include="mainFlags.projectDetailTemplate" >
 
     </section>
 
-    <!-----------弹窗小组件----------->
+    <!-- 弹窗小组件 -->
     <section class="de_popout de_boxshadow de_borderbox de_animation_popout" ng-include="popFlags.popTemplateUrl">
 
     </section>
 
-    <!-----------媒体详情----------->
+    <!-- 媒体详情 -->
     <section class="de_pop_show_media" ng-if="mainFlags.showPlayMedialPanel">
         <!--<div class="de_pop_show_media_content" ng-include="mainFlags.mediaPlayTemplate"></div>-->
         <!--<embed class="de_pop_show_flash" name="plugin" type="application/x-shockwave-flash"
@@ -148,9 +148,9 @@
         <span class="de_pop_show_media_close" ng-click="closePlayMediaPanel()">关闭</span>
     </section>
 	
-	<!-----------blackout----------->
+	<!-- blackout -->
     <div class="de_blackout" ng-show="rootFlags.showBlackOut"></div>
-    <!-----------load spinner----------->
+    <!-- load spinner -->
     <div class="de_loading de_animation_loading" ng-show="rootFlags.showLoading">
         <div class="de_loading_spinner"></div>
     </div>

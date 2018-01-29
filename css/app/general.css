@@ -4209,20 +4209,19 @@ span.zy_tooltips{
 		top:0;
 	}
 	.de_top_nav{
-		width:100px;
+		width:270px;
 	}
 	.de_top_nav ul{
-		text-align:center;
-	}
-    .de_top_nav ul li{
-		display:none;
+		text-align:left;
 	}
 	.de_top_nav ul li a{
 		line-height: 60px;
-	}
+    }
+    .de_btn_gallery{
+        display:none;
+    }
 	.de_btn_filter{
         display: inline-block!important;
-		width:100%!important;
     }
 	
 	.searchResult{
