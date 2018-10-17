@@ -57,11 +57,12 @@ services.constant("Config", {
         "editPwd": "change_password",
         "editInfo": "users/:userId/update",
         "editInfoReg": /users\/[\d]+\/update/,
-        "search": "search",
+        "search": "search/",
         "searchResult": "search/:content",
         "searchResultReg": /search\/.+/,
         "forgetPwd": "forget_password",
         "boxes": "topics",
+        "boxSearch": "search_topics/:keyword",
         "userHome": "users/:userId",
         "popMsg": "message"
     },
