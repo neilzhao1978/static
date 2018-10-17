@@ -1036,6 +1036,63 @@ viewControllers.controller("boxes",['$scope',"$interval","$routeParams","Config"
 
 }]);
 
+viewControllers.controller("boxSearch",['$scope',"$interval","$routeParams","Config","Storage","Box",function($scope,$interval,$routeParams,Config,Storage,Box){
+
+    var inter=null;
+    //覆盖了super里面的，一定要分开写，不然无法覆盖（这样可以覆盖的原理是因为对象是地址类型）
+    $scope.mainFlags.currentMenu=Config.mainMenu.box;
+    $scope.mainFlags.extMenuActive=false;
+
+
+
+    $scope.boxes=[];
+    $scope.loadedData=false;
+    $scope.filter={
+        scope:"",
+        keyword:""
+    };
+
+    if($routeParams.userId){
+        $scope.filter.scope="me";
+    }
+    if($routeParams.keyword){
+        $scope.filter.keyword=$routeParams.keyword;
+    }
+    $scope.keyDownSearch=function(event){
+        if(event.keyCode==13){
+            $scope.loadBoxes();
+        }
+    };
+
+    $scope.loadBoxes=function(){
+        Storage.clearScrollData(Config.scrollScreenType.box);
+        $interval.cancel(inter);//清除一下，因为这个面板不重新加载
+        $scope.boxes=[];
+        $scope.loadedData=false;
+        Box.getBoxes($scope.filter.scope,$scope.filter.keyword).$promise.then(function(data){
+
+            //console.log("In views");
+            var count= 0,length=data.topics.length;
+            inter=$interval(function(){
+                if(count<length){
+                    $scope.boxes.push(data.topics[count]);
+                    count++;
+                }else{
+                    //如果没有数据了，清除掉interval
+                    $interval.cancel(inter);
+                }
+
+                if(!$scope.loadedData){
+                    $scope.loadedData=!$scope.loadedData;
+                }
+            },200);
+
+        });
+    };
+    $scope.loadBoxes();
+
+}]);
+
 viewControllers.controller("boxDetail",['$scope',"$routeParams","Box","Storage","Config","CFunctions",
     function($scope,$routeParams,Box,Storage,Config,CFunctions){
 

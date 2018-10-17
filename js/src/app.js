@@ -26,6 +26,7 @@ pinWall.config(["$routeProvider","$locationProvider","$httpProvider","App",
             when("/topic/:boxId/artifact",{templateUrl: 'views/projectUpdate.html',controller:"projectUpdate"}).
             when("/search",{templateUrl: 'views/photowall.html',controller:"photowall"}).
             when("/search/:content",{templateUrl: 'views/searchResult.html',controller:"searchResult"}).
+            when("/search/topics/:keyword",{templateUrl: 'views/boxes.html',controller:"boxSearch"}).
             when("/admin/comments",{templateUrl: 'views/admin/commentsManage.html',controller:"commentsManage"}).
             when("/admin/projects",{templateUrl: 'views/admin/projectsManage.html',controller:"projectsManage"}).
             when("/admin/users",{templateUrl: 'views/admin/usersManage.html',controller:"usersManage"}).
