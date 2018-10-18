@@ -1,6 +1,6 @@
 <div ng-controller="ctrl" class="autoComplete">
     <input type="text" class="inputTxt de_inputbox_gray"
-           ng-model="content" ng-keyup="keyUpEvent()" ng-keydown="keyDownEvent($event)" placeholder="作品关键词...">
+           ng-model="content" ng-keyup="keyUpEvent()" ng-keydown="keyDownEvent($event)" placeholder="作品关键词/课程/学生/老师">
     <ul class="itemList">
         <li class="item" ng-repeat="item in items" ng-click="selectItem(item)"
             style="cursor:pointer" ng-class="{active:currentItemIndex==$index}" ng-mouseenter="setCurrent($index)">{{item}}</li>
