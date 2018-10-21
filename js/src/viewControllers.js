@@ -826,17 +826,22 @@ viewControllers.controller("projectUpdate",["$scope","$routeParams","$http","$ro
             }else{
                 if($scope.box.id!==0){
                     Project.resource.addToBox({boxId:$scope.box.id},$scope.project,function(data){
+                        $scope.project.id = data.artifactId;
                         toaster.pop("success",Config.messages.successTitle,Config.messages.optSuccRedirect,null,null);
                     });
                 }else{
                     Project.resource.add($scope.project,function(data){
+                        $scope.project.id = data.artifactId;
                         toaster.pop("success",Config.messages.successTitle,Config.messages.optSuccRedirect,null,null);
                     });
                 }
             }
 
-            //CFunctions.timeoutRedirect(Config.urls.userHome.replace(":userId",$scope.currentUser.id),false,true);
-            CFunctions.timeoutRedirect(Config.urls.projectDetail.replace(":projectId",$scope.project.id),true,true);
+            if($scope.project.id){
+                CFunctions.timeoutRedirect(Config.urls.projectDetail.replace(":projectId",$scope.project.id),true,true);
+            }else{
+                CFunctions.timeoutRedirect(Config.urls.userHome.replace(":userId",$scope.currentUser.id),false,true);
+            }
         }
     }]);
 

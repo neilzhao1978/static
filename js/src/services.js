@@ -348,7 +348,7 @@ services.service("AjaxErrorHandler", ["toaster", "Config", "CFunctions", functio
         toaster.pop('error', Config.messages.errorTitle, message, null, null);
     };
 
-    this.ajaxErrorHandler = function () {
+    this.ajaxErrorHandler = function (data) {
         toaster.pop('error', Config.messages.errorTitle, Config.messages.networkError, null, null);
     };
 }]);
