@@ -250,9 +250,9 @@ img{
     text-align: center;
 }
 
-.de_page_wrapper {
+/* .de_page_wrapper {
 
-}
+} */
 
 .de_tab_x2 {
     white-space: nowrap;
@@ -443,8 +443,9 @@ img{
 }
 
 
-.de_popout .de_top_directory{	
-}
+/* .de_popout .de_top_directory{	
+} */
+
 /*分类搜索*/
 .de_top_directory h3{
 	font-size:1em;
@@ -473,8 +474,9 @@ img{
 
 
 /******登录弹窗样式*******/
-.de_popout_login {
-}
+
+/* .de_popout_login {
+} */
 .de_popout_login .de_login_col{    
     padding-top:20px;
     vertical-align: top;
@@ -2191,19 +2193,19 @@ img{
     font-size: 14px;
 }
 
-.de_user_info_card .de_stats_tags>li {
+/* .de_user_info_card .de_stats_tags>li {
        
-}
+} */
 
 
 
 /*****************选题列表******************/
-.de_topic_wrapper{
+/* .de_topic_wrapper{
 	
 }
 .de_topic_list{	
 	
-}
+} */
 .de_topic_box{
 	position: relative;
 	height:140px;
@@ -2277,9 +2279,9 @@ img{
     right:0;
 	white-space:nowrap;
 }
-.topic_info .de_stats_tags>li{
+/* .topic_info .de_stats_tags>li{
 	
-}
+} */
 .de_topic_box .topic_action{
 	position: absolute;
 	top: 0;
@@ -2594,9 +2596,9 @@ display: block;
 	color:#000;
 }
 /*************作品上传****************/
-.de_screen_upload {
+/* .de_screen_upload {
 
-}
+} */
 .de_screen_upload>.de_upload_title{
 	margin:20px auto;
 	text-align: center;
@@ -3633,8 +3635,8 @@ span.zy_tooltips{
     width: 80%;
 }
 
-.de_comment_list {
-}
+/* .de_comment_list {
+} */
 
 .de_comment_list li {
     padding: 20px 40px 20px 20px;
@@ -3812,7 +3814,7 @@ span.zy_tooltips{
     background:#07af69;
     color: #fff;
 }
-.de_has_ppt:before{
+/* .de_has_ppt:before{
     
 }
 .de_has_3d:before{
@@ -3829,7 +3831,7 @@ span.zy_tooltips{
 }
 .de_has_html5:before{
     
-}
+} */
 
 
 /*-----------------弹出窗口-------------------------*/
@@ -4176,7 +4178,7 @@ span.zy_tooltips{
 	}
 	.de_404_body>a{
 		display:inline-block;
-		width:100%:
+		width:100%;
 		}
 	.de_child_img{
 		position:static;
@@ -4220,6 +4222,9 @@ span.zy_tooltips{
     .de_btn_gallery{
         display:none;
     }
+    /* .de_btn_grabox{
+        
+    } */
 	.de_btn_filter{
         display: inline-block!important;
     }

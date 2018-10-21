@@ -1040,7 +1040,7 @@ viewControllers.controller("boxSearch",['$scope',"$interval","$routeParams","Con
 
     var inter=null;
     //覆盖了super里面的，一定要分开写，不然无法覆盖（这样可以覆盖的原理是因为对象是地址类型）
-    $scope.mainFlags.currentMenu=Config.mainMenu.box;
+    $scope.mainFlags.currentMenu=Config.mainMenu.grabox;
     $scope.mainFlags.extMenuActive=false;
 
 

@@ -24,7 +24,8 @@ services.constant("Config", {
     captcha: "captcha.jpg",
     mainMenu: {
         project: "project",
-        box: "box"
+        box: "box",
+        grabox:"grabox"
     },
     boxStatus: {
         open: 0,
