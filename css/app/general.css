@@ -4220,11 +4220,11 @@ span.zy_tooltips{
 		line-height: 60px;
     }
     .de_btn_gallery{
-        display:none;
+        display:none!important;
     }
-    /* .de_btn_grabox{
-        
-    } */
+    .de_btn_topicbox{
+        display: none!important;
+    }
 	.de_btn_filter{
         display: inline-block!important;
     }
