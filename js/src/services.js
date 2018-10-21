@@ -19,7 +19,7 @@ services.constant("Config", {
     perLoadCount: 12, //作品、评论、资源等每次加载的个数
     hasNoMoreFlag: -1, //作品、评论、资源等没有更多的标志,当没有更多的时候将其的loadId设置为-1
     qNUploadDomain: 'http://qiniu-plupload.qiniudn.com/',
-    qNBucketDomain: "http://design-pinwall.qiniudn.com/",
+    qNBucketDomain: "http://pinwall.fzcloud.design-engine.org/",
     qNImagePreviewSuffix: "?imageMogr2/gravity/Center/crop/:size",
     captcha: "captcha.jpg",
     mainMenu: {
